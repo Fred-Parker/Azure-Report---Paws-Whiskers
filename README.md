@@ -2,19 +2,25 @@
 -----------------------------
 
 Description / Project Overview:
-================
 ----------------
 The aim of this Microsoft Azure report was outline key areas to consider when setting up an Azure database for the benefit of a small-scale local petshop business.
 
 The report is broken down in to a series of my recommendations to consider. Starting with key GDPR and data protection laws that need to be complied with, and progressing to specific suggestions on how Microsoft Azure / data analsysis could benefit the businesses day-to-day running. 
 
 Author: Fred Parker
-=======
 -------
 
-Snapshots of SQL Queries used to build tables:
-================
-----------------
+<ul>
+  <li><a href="#screenshots">Screenshots</a></li>
+  <li><a href="#data law compliance">Data Law Compliance</a></li>
+  <li><a href="#azure service recommendations">Azure Service Recommendations</a></li>
+  <li><a href="#Data Storage Formats & Structures in Azure">Data Storage Formats & Structures in Azure</a></li>
+  <li><a href="#additional recommendations">Additional Recommendations</a></li>
+</ul>
+
+<hr>
+<h2 id="screenshots">Snapshots of SQL Queries Used</h2>
+
 **Customer details:**
 
 ![image](https://github.com/user-attachments/assets/f17a670a-51dd-4442-92b2-4fdc7cbb770e)
@@ -31,7 +37,8 @@ Snapshots of SQL Queries used to build tables:
 
 
 
-
+<hr>
+<h2 id="data law compliance">Key Recommendations Relating to Data Law Compliance</h2>
 
 **Data Laws** 
 
@@ -69,7 +76,7 @@ Children's Data: The DPA 2018 sets the age of consent for data processing at 13 
 
 Automated Decision-Making: The DPA 2018 includes additional safeguards and provisions for automated decision-making, including profiling, which are more detailed than those in the GDPR. 
 
-**In addiiton to these above regulations there are also some industry-specific recommendations I would like to make for Paws & Whiskers to consider.**
+**In addition to these above regulations there are also some industry-specific recommendations I would like to make for Paws & Whiskers to consider.**
 
  
 
@@ -89,6 +96,10 @@ It is my recommendation that Paws & Whiskers adhere to robust and effective cybe
 
 Cybersecurity Best Practices: Implementing strong cybersecurity measures, such as encryption, firewalls, and regular security audits, is essential to protect sensitive and payment information from unauthorized access and breaches. 
 
+
+<hr>
+<h2 id="azure service recommendations">Key Recommendations Relating to Available Azure Services</h2>
+
 **Azure Service Recommendations**
 
  
@@ -97,11 +108,15 @@ There are a few core Azure services I would recommend to Pets & Whiskers based o
 
  
 
-Data Storage Options: 
+Data Storage Options:
+--------------------
 
  
 
-Azure Blob Storage - By leveraging Azure Blob Storage, the pet shop can efficiently manage and store their data, ensuring that it is secure, accessible, and cost-effective. Here are some benefits of using Azure Blob Storage: 
+Azure Blob Storage
+------------------
+
+By leveraging Azure Blob Storage, the pet shop can efficiently manage and store their data, ensuring that it is secure, accessible, and cost-effective. Here are some benefits of using Azure Blob Storage: 
 
 Scalability: Azure Blob Storage can handle large volumes of unstructured data, making it ideal for storing various types of data such as customer information, inventory records, and transaction logs. 
 
@@ -115,7 +130,10 @@ Integration with Other Azure Services: It seamlessly integrates with other Azure
 
 Flexibility: Azure Blob Storage supports various data types, including text, images, videos, and backups, making it versatile for different use cases in a pet shop. 
 
-Azure SQL Database - By leveraging Azure SQL Database, the pet shop can ensure its customer data is stored securely, accessed quickly, and managed efficiently. Here are some benefits of using Azure SQL DB as data storage: 
+Azure SQL Database
+------------------
+
+By leveraging Azure SQL Database, the pet shop can ensure its customer data is stored securely, accessed quickly, and managed efficiently. Here are some benefits of using Azure SQL DB as data storage: 
 
  
 
@@ -131,7 +149,10 @@ Cost-Efficiency: You pay for what you use, which can be cost-effective. Plus, it
 
 Integration: Seamlessly integrates with other Azure services and tools, making it easier to build a comprehensive ecosystem for the business needs, including data analytics and reporting. 
 
-Data Analysis Tools: There are a couple of reliable and beneficial data analysis tools that I recommend Paws & Whiskers consider including in their exploration of Azure. 
+Data Analysis Tools:
+-------------------
+
+There are a couple of reliable and beneficial data analysis tools that I recommend Paws & Whiskers consider including in their exploration of Azure. 
 
 Azure Machine Learning – This could easily automate analysis of customer purchase patterns and identify trends and popularity across all the products Pets & Whiskers offers. It could also help with monitoring inventory, and forecasting purchases, to help always keep popular products in stock with less human-effort needed to monitor stock-levels. It could also assist with compiling and anlaysing customer feedback, product recommendations, and pricing optimisations. 
 
@@ -141,7 +162,8 @@ Azure Synapse Analytics – Azure Synapse Analytics could help to unify data ins
 
  
 
-Data Integration and Automation:  
+Data Integration and Automation:
+-------------------------------
 
  
 
@@ -149,7 +171,8 @@ Azure Data Factory – This could help to automate the input and storage of data
 
  
 
-Data Types & Data Modelling 
+Data Types & Data Modelling:
+---------------------------
 
  
 
@@ -261,20 +284,23 @@ The FactSales table holds transactional data and links to the dimension tables (
 This structure ensures that the relational model is optimised for transactional operations, while the data warehouse model is optimised for reporting and analytics, supporting different needs at Paws & Whiskers. 
 
  
+<hr>
+<h2 id="Data Storage Formats & Structures in Azure">Data Storage Formats & Structures in Azure</h2> 
 
-**Data Storage Formats & Structures in Azure**
-
- 
-
-Data Formats – When storing the data at Paws & Whiskers there are a few different data types that would prove suitable for the different types of data being stored. Raw data could be stored as a CSV (Comma Separated Values) format, which would make plain text files easy to read, and edit using any text editor. Structured data could be stored in a JSON (Javascript Object Notation) format, which would be a useful way of storing large quantities of key:value data such as customer information. Parquet format would be a good option for data that we want to analyse – data stored in a column format optimises read and write efficiency for analytical queries. It would also be able to be compressed to a smaller file ratio compared to CSV files, making it both cheaper to store and quicker to transfer. 
-
- 
-
-Data Security and Encryption – Azure has several built-in encryption features that would prove effective as options for securing the data Paws & Whiskers stores and using access controls to protect data will also help business compliance with the previously outlined data-privacy regulations. Here are some of the options I will recommend Paws & Whiskers consider, including encryption of data both in transit and at rest: 
+Data Formats
+------------
+When storing the data at Paws & Whiskers there are a few different data types that would prove suitable for the different types of data being stored. Raw data could be stored as a CSV (Comma Separated Values) format, which would make plain text files easy to read, and edit using any text editor. Structured data could be stored in a JSON (Javascript Object Notation) format, which would be a useful way of storing large quantities of key:value data such as customer information. Parquet format would be a good option for data that we want to analyse – data stored in a column format optimises read and write efficiency for analytical queries. It would also be able to be compressed to a smaller file ratio compared to CSV files, making it both cheaper to store and quicker to transfer. 
 
  
 
-Encryption at Rest: 
+Data Security and Encryption
+----------------------------
+Azure has several built-in encryption features that would prove effective as options for securing the data Paws & Whiskers stores and using access controls to protect data will also help business compliance with the previously outlined data-privacy regulations. Here are some of the options I will recommend Paws & Whiskers consider, including encryption of data both in transit and at rest: 
+
+ 
+
+Encryption at Rest
+------------------
 
 Azure Storage Service Encryption (SSE): Automatically encrypts data stored in Azure Storage (blobs, files, queues, and tables) using 256-bit AES encryption. 
 
@@ -282,13 +308,15 @@ Azure Disk Encryption (ADE): Encrypts OS and data disks of Azure Virtual Machine
 
 Encryption at Host: Ensures that all data stored on the host, including temp disks and caches, is encrypted. 
 
-Encryption in Transit: 
+Encryption in Transit
+---------------------
 
 TLS/SSL: Azure uses Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols to encrypt data as it travels between clients and Azure services. 
 
  
 
-**Additional Considerations**
+<hr>
+<h2 id="additional recommendations">Additional Recommendations</h2> 
 
  
 
@@ -296,11 +324,15 @@ Finally, here are some additional things I recommend Paws & Whiskers consider wh
 
  
 
-Backup and Disaster Recovery – Using Azure Backup and Azure Site Recovery you can reliably safeguard against data loss. This helps to protect data against loss or damage and helps ensure overall business continuity and consistency. 
+Backup and Disaster Recovery
+----------------------------
+Using Azure Backup and Azure Site Recovery you can reliably safeguard against data loss. This helps to protect data against loss or damage and helps ensure overall business continuity and consistency. 
 
  
 
-Data Visualisation – Using Azure’s built-in PowerBI support and functionality is a great tool to consider for generating and analysing in-depth visualisations on the data that Paws & Whiskers will be storing. Integrating Power BI with Azure services such Azure Stream Analytics and Azure Event Hubs would allow the business to create real-time dashboards that display data as frequently updated as they could want – Paws & Whiskers could monitor sales performances and customer transactions and feedback as they happen live. 
+Data Visualisation
+------------------
+Using Azure’s built-in PowerBI support and functionality is a great tool to consider for generating and analysing in-depth visualisations on the data that Paws & Whiskers will be storing. Integrating Power BI with Azure services such Azure Stream Analytics and Azure Event Hubs would allow the business to create real-time dashboards that display data as frequently updated as they could want – Paws & Whiskers could monitor sales performances and customer transactions and feedback as they happen live. 
 
  
 
